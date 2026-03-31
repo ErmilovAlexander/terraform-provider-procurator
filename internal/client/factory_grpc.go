@@ -95,7 +95,8 @@ func grpcTransportCredentials(cfg Config) (credentials.TransportCredentials, err
 		tlsCfg.ServerName = cfg.Authority
 	}
 
-	if cfg.CAFile != "" {
+	switch {
+	case cfg.CAFile != "":
 		pemData, err := os.ReadFile(cfg.CAFile)
 		if err != nil {
 			return nil, fmt.Errorf("read ca_file %q: %w", cfg.CAFile, err)
@@ -105,12 +106,19 @@ func grpcTransportCredentials(cfg Config) (credentials.TransportCredentials, err
 			return nil, fmt.Errorf("parse ca_file %q: no certificates found", cfg.CAFile)
 		}
 		tlsCfg.RootCAs = pool
-	} else if len(embeddedRootCA) > 0 {
+
+	case len(embeddedRootCA) > 0:
 		pool := x509.NewCertPool()
 		if !pool.AppendCertsFromPEM(embeddedRootCA) {
 			return nil, fmt.Errorf("parse embedded CA: no certificates found")
 		}
 		tlsCfg.RootCAs = pool
+
+	case cfg.Insecure:
+		// Разрешаем сборку/запуск без CA только в insecure режиме.
+		// RootCAs не задаём, ниже будет InsecureSkipVerify.
+	default:
+		return nil, fmt.Errorf("ca_file is required when provider binary is built without embedded CA")
 	}
 
 	if cfg.Insecure {

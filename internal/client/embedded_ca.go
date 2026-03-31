@@ -1,3 +1,5 @@
+//go:build embedded_ca
+
 package client
 
 import _ "embed"
