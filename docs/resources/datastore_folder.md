@@ -4,7 +4,12 @@
 ## `docs/resources/datastore_folder.md`
 
 ```md
-# datastore_folder Resource
+---
+page_title: "procurator_datastore_folder Resource - Procurator Provider"
+description: "Creates or manages a folder inside a datastore."
+---
+
+# procurator_datastore_folder Resource
 
 Creates or manages a folder inside a datastore.
 

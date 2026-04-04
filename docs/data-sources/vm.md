@@ -4,9 +4,14 @@
 ## `docs/data-sources/vm.md`
 
 ```md
-# vm Data Source
+---
+page_title: "procurator_vm Data Source - Procurator Provider"
+description: "Finds a virtual machine by ID, deployment name, UUID, or name."
+---
 
-Finds a virtual machine by ID, deployment name, UUID, or name depending on backend matching logic.
+# procurator_vm Data Source
+
+Finds a virtual machine by ID, deployment name, UUID, or name.
 
 ## Example Usage
 

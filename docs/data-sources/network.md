@@ -4,7 +4,12 @@
 ## `docs/data-sources/network.md`
 
 ```md
-# network Data Source
+---
+page_title: "procurator_network Data Source - Procurator Provider"
+description: "Finds a network by ID or name."
+---
+
+# procurator_network Data Source
 
 Finds a network by ID or name.
 

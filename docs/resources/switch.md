@@ -4,7 +4,12 @@
 ## `docs/resources/switch.md`
 
 ```md
-# switch Resource
+---
+page_title: "procurator_switch Resource - Procurator Provider"
+description: "Manages a virtual switch in Umbra."
+---
+
+# procurator_switch Resource
 
 Manages a virtual switch in Umbra.
 

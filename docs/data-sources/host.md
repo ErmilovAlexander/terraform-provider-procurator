@@ -1,12 +1,17 @@
 
 ---
 
-# Data sources
+# DATA SOURCES
 
 ## `docs/data-sources/host.md`
 
 ```md
-# host Data Source
+---
+page_title: "procurator_host Data Source - Procurator Provider"
+description: "Returns information about the current Procurator host."
+---
+
+# procurator_host Data Source
 
 Returns information about the current Procurator host.
 

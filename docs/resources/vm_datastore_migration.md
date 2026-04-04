@@ -4,7 +4,12 @@
 ## `docs/resources/vm_datastore_migration.md`
 
 ```md
-# vm_datastore_migration Resource
+---
+page_title: "procurator_vm_datastore_migration Resource - Procurator Provider"
+description: "Migrates a VM to another datastore."
+---
+
+# procurator_vm_datastore_migration Resource
 
 Migrates a VM to another datastore.
 

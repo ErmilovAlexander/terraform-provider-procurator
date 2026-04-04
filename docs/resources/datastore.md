@@ -1,12 +1,17 @@
 
 ---
 
-# Resources
+# RESOURCES
 
 ## `docs/resources/datastore.md`
 
 ```md
-# datastore Resource
+---
+page_title: "procurator_datastore Resource - Procurator Provider"
+description: "Manages a datastore through Procurator core."
+---
+
+# procurator_datastore Resource
 
 Manages a datastore through Procurator core.
 

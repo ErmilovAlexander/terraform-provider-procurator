@@ -4,7 +4,12 @@
 ## `docs/data-sources/vm_snapshots.md`
 
 ```md
-# vm_snapshots Data Source
+---
+page_title: "procurator_vm_snapshots Data Source - Procurator Provider"
+description: "Returns snapshots for a VM."
+---
+
+# procurator_vm_snapshots Data Source
 
 Returns snapshots for a VM.
 

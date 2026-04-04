@@ -4,7 +4,12 @@
 ## `docs/data-sources/switch.md`
 
 ```md
-# switch Data Source
+---
+page_title: "procurator_switch Data Source - Procurator Provider"
+description: "Finds a switch by ID."
+---
+
+# procurator_switch Data Source
 
 Finds a switch by ID.
 

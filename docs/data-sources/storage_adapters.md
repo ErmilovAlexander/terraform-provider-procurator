@@ -4,7 +4,12 @@
 ## `docs/data-sources/storage_adapters.md`
 
 ```md
-# storage_adapters Data Source
+---
+page_title: "procurator_storage_adapters Data Source - Procurator Provider"
+description: "Returns storage adapter inventory."
+---
+
+# procurator_storage_adapters Data Source
 
 Returns storage adapter inventory.
 

@@ -4,7 +4,12 @@
 ## `docs/resources/network.md`
 
 ```md
-# network Resource
+---
+page_title: "procurator_network Resource - Procurator Provider"
+description: "Manages a network in Umbra."
+---
+
+# procurator_network Resource
 
 Manages a network in Umbra.
 

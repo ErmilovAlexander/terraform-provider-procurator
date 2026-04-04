@@ -4,7 +4,12 @@
 ## `docs/resources/datastore_lvm.md`
 
 ```md
-# datastore_lvm Resource
+---
+page_title: "procurator_datastore_lvm Resource - Procurator Provider"
+description: "Creates a datastore backed by block devices through Procurator core."
+---
+
+# procurator_datastore_lvm Resource
 
 Creates a datastore backed by block devices through Procurator core.
 

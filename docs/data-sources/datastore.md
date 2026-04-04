@@ -4,7 +4,12 @@
 ## `docs/data-sources/datastore.md`
 
 ```md
-# datastore Data Source
+---
+page_title: "procurator_datastore Data Source - Procurator Provider"
+description: "Finds a datastore by name or ID."
+---
+
+# procurator_datastore Data Source
 
 Finds a datastore by name or ID.
 

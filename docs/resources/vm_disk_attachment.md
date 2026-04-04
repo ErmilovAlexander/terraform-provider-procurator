@@ -4,7 +4,12 @@
 ## `docs/resources/vm_disk_attachment.md`
 
 ```md
-# vm_disk_attachment Resource
+---
+page_title: "procurator_vm_disk_attachment Resource - Procurator Provider"
+description: "Attaches an additional virtual disk to an existing VM."
+---
+
+# procurator_vm_disk_attachment Resource
 
 Attaches an additional virtual disk to an existing VM.
 

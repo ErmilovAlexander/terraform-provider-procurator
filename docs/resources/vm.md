@@ -4,7 +4,12 @@
 ## `docs/resources/vm.md`
 
 ```md
-# vm Resource
+---
+page_title: "procurator_vm Resource - Procurator Provider"
+description: "Manages a virtual machine."
+---
+
+# procurator_vm Resource
 
 Manages a virtual machine.
 

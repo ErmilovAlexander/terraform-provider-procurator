@@ -4,7 +4,12 @@
 ## `docs/resources/vm_network_attachment.md`
 
 ```md
-# vm_network_attachment Resource
+---
+page_title: "procurator_vm_network_attachment Resource - Procurator Provider"
+description: "Attaches an additional NIC to an existing VM."
+---
+
+# procurator_vm_network_attachment Resource
 
 Attaches an additional NIC to an existing VM.
 

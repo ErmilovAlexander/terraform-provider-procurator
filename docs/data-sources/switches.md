@@ -4,7 +4,12 @@
 ## `docs/data-sources/switches.md`
 
 ```md
-# switches Data Source
+---
+page_title: "procurator_switches Data Source - Procurator Provider"
+description: "Returns all visible switches."
+---
+
+# procurator_switches Data Source
 
 Returns all visible switches.
 

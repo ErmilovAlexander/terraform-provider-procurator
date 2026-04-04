@@ -4,7 +4,12 @@
 ## `docs/data-sources/template.md`
 
 ```md
-# template Data Source
+---
+page_title: "procurator_template Data Source - Procurator Provider"
+description: "Finds a template by ID, UUID, or name."
+---
+
+# procurator_template Data Source
 
 Finds a template by ID, UUID, or name.
 

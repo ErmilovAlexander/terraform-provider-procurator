@@ -4,7 +4,12 @@
 ## `docs/resources/vm_snapshot.md`
 
 ```md
-# vm_snapshot Resource
+---
+page_title: "procurator_vm_snapshot Resource - Procurator Provider"
+description: "Creates and manages a VM snapshot."
+---
+
+# procurator_vm_snapshot Resource
 
 Creates and manages a VM snapshot.
 
