@@ -1,9 +1,3 @@
-
----
-
-## `docs/data-sources/storage_adapters.md`
-
-```md
 ---
 page_title: "procurator_storage_adapters Data Source - Procurator Provider"
 description: "Returns storage adapter inventory."
@@ -17,3 +11,22 @@ Returns storage adapter inventory.
 
 ```terraform
 data "procurator_storage_adapters" "all" {}
+```
+
+## Attribute Reference
+
+- `items` - List of storage adapter objects including:
+  - `id`
+  - `adapter`
+  - `identifier`
+  - `model`
+  - `type`
+  - `status_text`
+  - `status_value`
+  - `targets`
+  - `devices`
+  - `rescan_storage_adapter`
+  - `scan_storage_device`
+  - `scan_datastore`
+  - `protect_datastore`
+  - `response`

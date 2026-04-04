@@ -1,9 +1,3 @@
-
----
-
-## `docs/resources/vm_disk_attachment.md`
-
-```md
 ---
 page_title: "procurator_vm_disk_attachment Resource - Procurator Provider"
 description: "Attaches an additional virtual disk to an existing VM."
@@ -29,3 +23,22 @@ resource "procurator_vm_disk_attachment" "example" {
   read_only        = false
   remove_on_detach = true
 }
+```
+
+## Argument Reference
+
+- `vm_id` - (Required) VM ID.
+- `size_gb` - (Required) Disk size in GB.
+- `storage_id` - (Required) Datastore ID.
+- `device_type` - (Optional) Device type.
+- `bus` - (Optional) Bus type.
+- `target` - (Optional) Target device name.
+- `boot_order` - (Optional) Boot order.
+- `provision_type` - (Optional) Provisioning type.
+- `disk_mode` - (Optional) Disk mode.
+- `read_only` - (Optional) Read-only flag.
+- `remove_on_detach` - (Optional) Remove disk when resource is destroyed.
+
+## Attribute Reference
+
+- `id` - Attachment ID.

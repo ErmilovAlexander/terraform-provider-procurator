@@ -1,9 +1,3 @@
-
----
-
-## `docs/data-sources/switches.md`
-
-```md
 ---
 page_title: "procurator_switches Data Source - Procurator Provider"
 description: "Returns all visible switches."
@@ -17,3 +11,14 @@ Returns all visible switches.
 
 ```terraform
 data "procurator_switches" "all" {}
+```
+
+## Attribute Reference
+
+- `switches` - List of switch objects including:
+  - `id`
+  - `mtu`
+  - `state`
+  - `networks`
+  - `errors`
+  - `nics`
