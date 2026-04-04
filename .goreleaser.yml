@@ -1,33 +1,37 @@
 project_name: terraform-provider-procurator
- 
+
 before:
   hooks:
     - go mod tidy
     - mkdir -p internal/client/certs
-    - echo "$CA_CERT" > internal/client/certs/procurator-root-ca.pem
+    - sh -c 'if [ -n "$CA_CERT" ]; then printf "%s" "$CA_CERT" > internal/client/certs/procurator-root-ca.pem; fi'
 
 builds:
-  - id: default
+  - id: provider
     main: .
-    binary: terraform-provider-procurator
+    binary: "{{ .ProjectName }}_v{{ .Version }}"
     env:
       - CGO_ENABLED=0
     goos:
-      - linux
       - darwin
+      - linux
       - windows
     goarch:
       - amd64
       - arm64
+    ignore:
+      - goos: windows
+        goarch: arm64
 
 archives:
-  - id: default
+  - id: provider
+    builds:
+      - provider
     format: zip
-    name_template: >-
-      {{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
     files:
-      - LICENSE*
-      - README*
+      - src: LICENSE*
+      - src: README*
 
 checksum:
   name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
@@ -38,7 +42,6 @@ signs:
     args:
       - "--batch"
       - "--yes"
-      - "--armor"
       - "--detach-sign"
       - "--local-user"
       - "{{ .Env.GPG_FINGERPRINT }}"
@@ -50,7 +53,8 @@ release:
   github:
     owner: ErmilovAlexander
     name: terraform-provider-procurator
-
-  name_template: "v{{ .Version }}"
   draft: false
   prerelease: false
+  extra_files:
+    - glob: terraform-registry-manifest.json
+      name_template: "{{ .ProjectName }}_{{ .Version }}_manifest.json"
