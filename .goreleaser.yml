@@ -1,3 +1,5 @@
+version: 2
+
 project_name: terraform-provider-procurator
 
 before:
@@ -33,17 +35,11 @@ archives:
       - src: LICENSE*
       - src: README*
 
-blobs:
-  - provider: github
-    ids:
-      - manifest
-    disable: false
-    files:
-      - terraform-registry-manifest.json
-    name_template: "{{ .ProjectName }}_{{ .Version }}_manifest.json"
-
 checksum:
   name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
+  extra_files:
+    - glob: terraform-registry-manifest.json
+      name_template: "{{ .ProjectName }}_{{ .Version }}_manifest.json"
 
 signs:
   - artifacts: checksum
@@ -64,3 +60,6 @@ release:
     name: terraform-provider-procurator
   draft: false
   prerelease: false
+  extra_files:
+    - glob: terraform-registry-manifest.json
+      name_template: "{{ .ProjectName }}_{{ .Version }}_manifest.json"
